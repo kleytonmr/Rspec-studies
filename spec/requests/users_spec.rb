@@ -18,7 +18,7 @@ RSpec.describe "Users", type: :request do
 
   describe "POST /users"do
     context "quando tem parametos válidos" do
-      it "creates the user with correct attributes" do
+      it "cria um user com os atributos corretos" do
         user_attributes = FactoryBot.attributes_for(:user)
         post users_path, params: { user: user_attributes}
         expect(User.last).to have_attributes(user_attributes)
