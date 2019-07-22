@@ -1,0 +1,9 @@
+<div>
+  <h1>List weapons</h1>
+
+  <ul>
+    <% @weapons.each do |weapon| %>
+      <li>Title: <%= link_to weapon.title, weapon_path(weapon) %> - <span>Current power: <%=weapon.current_power%></span></li>
+    <% end %>
+  </ul>
+</div>
